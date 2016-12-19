@@ -26,6 +26,11 @@ a, a:visited {
 	color: black;
 }
 
+a:hover {
+    color: #2d95bf;
+    font-weight: bold;
+}
+
 #banner {
 	background-color: white;
 	width: 100%;

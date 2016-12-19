@@ -6,13 +6,28 @@
 	<script src="survey_graphs.js"></script>
 
 <body>
-	Let's get to the graphs!
+	<header>
+		<div id="banner">
+			<h1 id="site-title">
+				<a href="http://atlasofcaregiving.com/">
+		          <img class="normal" src="AoC.png" alt="Atlas of Caregiving"/>
+		        </a>
+		    </h1>
+		</div>
+	</header>
+
+	<a href="home.html" title="Homepage"> Home </a>
+
+	<br>
+	<br>
+
 	<form action="javascript:drawChart()">
   		Username: <input type="text" name="username" id="username">
   		<input type="submit" value="Submit">
 	</form>
 
-	<div id="chart_div"></div>
+	<div id="agg_chart_div"></div>
+	<div id="individual_chart_div"></div>
 </body>
 
 <html>
