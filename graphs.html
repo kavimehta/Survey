@@ -2,15 +2,17 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script src="survey_graphs.js"></script>
-</head>
 
 <body>
 	Let's get to the graphs!
-	<form action="javascript:getUserData(username.value)">
+	<form action="javascript:drawChart()">
   		Username: <input type="text" name="username" id="username">
   		<input type="submit" value="Submit">
 	</form>
+	
+	<div id="chart_div" style="width:400; height:300"></div>
 </body>
 
 <html>
