@@ -21,7 +21,7 @@ function drawChart() {
 	query3.send(handleQueryResponse3);
 }
 
-/* Generate main graph of Score by Time. */
+/* Update most recent score and generate main graph of Score by Time. */
 function handleQueryResponse1(response) {
 	if (response.isError()) {
 		alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
@@ -31,6 +31,8 @@ function handleQueryResponse1(response) {
 	if (userTable.getNumberOfRows() == 0) {
 		alert('The username you entered does not match any entries.')
 	} else {
+		var most_recent_score = userTable.getValue(userTable.getNumberOfRows() - 1, 1);
+		document.getElementById('most_recent_score_div').innerHTML = most_recent_score.toString();
 		var chart = new google.visualization.LineChart(document.getElementById('agg_chart_div'));
 		var options = {
 			pointSize : 3,
