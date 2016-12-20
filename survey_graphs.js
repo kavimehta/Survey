@@ -17,7 +17,7 @@ function drawChart() {
 	query2.send(handleQueryResponse2);
 
 	var query3 = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1pkfeP8RcJEE0nha_duBzI6L7Yt3EacfqOK3H0RecjxE/edit?usp=sharing/gviz/tq');
-	query3.setQuery("SELECT A, X, M WHERE B = '" + username + "' ORDER BY A");
+	query3.setQuery("SELECT Y, X, M WHERE B = '" + username + "' ORDER BY A");
 	query3.send(handleQueryResponse3);
 }
 
@@ -109,9 +109,9 @@ var nudges = {
 
 /* Returns what range a score is in: low, medium, or high. */
 function get_range(score) {
-	if (score <= 42) {
+	if (score < 43) {
 		return "low";
-	} else if (score <= 67) {
+	} else if (score < 68) {
 		return "medium";
 	} else {
 		return "high";
