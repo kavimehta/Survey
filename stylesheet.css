@@ -42,3 +42,7 @@ a:hover {
     margin-bottom: 0;
 }
 
+div {
+    white-space: pre;
+}
+
